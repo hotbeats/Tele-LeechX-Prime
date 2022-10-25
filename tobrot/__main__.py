@@ -217,6 +217,7 @@ if __name__ == "__main__":
                     text += f"\n\n📬 𝙌𝙪𝙤𝙩𝙚 :\n\n<b>{qText}</b>\n\n🏷 <i>By {qAuthor}</i>"
             except Exception as q:
                 LOGGER.error("Quote API Error : {q}")
+      if AUTH_CHANNEL:
         for chatx in AUTH_CHANNEL:
             for a in app:
                 try:
