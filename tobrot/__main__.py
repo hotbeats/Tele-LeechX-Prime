@@ -219,8 +219,7 @@ if __name__ == "__main__":
                 LOGGER.error("Quote API Error : {q}")
         if AUTH_CHANNEL:
             for chatx in AUTH_CHANNEL:
-            for a in app:
-                try:
+                for a in app:
                     a.send_message(chat_id=int(chatx), text=rst_text, parse_mode=enums.ParseMode.HTML)
                 except ChannelInvalid:
                     LOGGER.warning(f'Make Sure the Bot is Added to Chat ID : {chatx}')
