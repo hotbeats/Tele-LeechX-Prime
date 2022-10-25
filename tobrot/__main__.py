@@ -206,23 +206,25 @@ if __name__ == "__main__":
             a.edit_message_text(chat_id, msg_id, rst_text, disable_web_page_preview=True)
         oremove(".restartmsg")
     elif OWNER_ID:
-        if RDM_QUOTE:
-            try:
-                qResponse = rget("https://quote-garden.herokuapp.com/api/v3/quotes/random")
-                if qResponse.status_code == 200:
-                    qData = qResponse.json() 
-                    qText = qData['data'][0]['quoteText']
-                    qAuthor = qData['data'][0]['quoteAuthor']
-                    #qGenre = qData['data'][0]['quoteGenre']
-                    text += f"\n\n📬 𝙌𝙪𝙤𝙩𝙚 :\n\n<b>{qText}</b>\n\n🏷 <i>By {qAuthor}</i>"
-            except Exception as q:
-                LOGGER.error("Quote API Error : {q}")
-        if AUTH_CHANNEL:
-            for chatx in AUTH_CHANNEL:
-                for a in app:
-                    a.send_message(chat_id=int(chatx), text=rst_text, parse_mode=enums.ParseMode.HTML)
-   except Exception as e:
-           LOGGER.warning(e)
+        try:
+            text = f"<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !!</b>\n\n{ist}\n\n<b>ℹ️ 𝙑𝙚𝙧𝙨𝙞𝙤𝙣 :</b> <code>{__version__}</code>"
+            if RDM_QUOTE:
+                try:
+                    qResponse = requests.get("https://quote-garden.herokuapp.com/api/v3/quotes/random")
+                    if qResponse.status_code == 200:
+                        qData = qResponse.json() 
+                        qText = qData['data'][0]['quoteText']
+                        qAuthor = qData['data'][0]['quoteAuthor']
+                        #qGenre = qData['data'][0]['quoteGenre']
+                        text += f"\n\n📬 𝙌𝙪𝙤𝙩𝙚 :\n\n<b>{qText}</b>\n\n🏷 <i>By {qAuthor}</i>"
+                except Exception as q:
+                    LOGGER.info("Quote API Error : {q}")
+            if AUTH_CHANNEL:
+                for i in AUTH_CHANNEL:
+                    for a in app:
+                        a.send_message(chat_id=i, text=text, parse_mode=enums.ParseMode.HTML)
+        except Exception as e:
+            LOGGER.warning(e)
     if SET_BOT_COMMANDS.lower() == "true":
         for a in app:
             a.set_bot_commands(botcmds)
