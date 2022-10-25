@@ -8,7 +8,7 @@
 # All Right Reserved
 
 import logging
-from pytz import timezone
+import timezone
 from urllib.parse import quote as q
 from os import path as opath, makedirs, remove as oremove, execl
 from shutil import rmtree
