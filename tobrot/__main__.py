@@ -221,7 +221,7 @@ if __name__ == "__main__":
             for chatx in AUTH_CHANNEL:
                 for a in app:
                     a.send_message(chat_id=int(chatx), text=rst_text, parse_mode=enums.ParseMode.HTML)
-       except Exception as e:
+    except Exception as e:
            LOGGER.warning(e)
     if SET_BOT_COMMANDS.lower() == "true":
         for a in app:
