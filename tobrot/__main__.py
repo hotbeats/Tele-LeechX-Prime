@@ -8,7 +8,7 @@
 # All Right Reserved
 
 import logging
-import timezone
+import pytz
 from urllib.parse import quote as q
 from os import path as opath, makedirs, remove as oremove, execl
 from shutil import rmtree
@@ -189,7 +189,7 @@ if __name__ == "__main__":
             LOGGER.info(f"Pixabay API Error: {err}")
 
     # Bot Restart & Restart Message >>>>>>>>
-    curr = datetime.now(timezone(TIMEZONE))
+    now=datetime.now(pytz.timezone(f'{TIMEZONE}'))
     date = curr.strftime('%d %B, %Y')
     time = curr.strftime('%I:%M:%S %p')
     rst_text = f'''<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !!</b>
