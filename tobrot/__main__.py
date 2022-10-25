@@ -221,12 +221,8 @@ if __name__ == "__main__":
             for chatx in AUTH_CHANNEL:
                 for a in app:
                     a.send_message(chat_id=int(chatx), text=rst_text, parse_mode=enums.ParseMode.HTML)
-                except ChannelInvalid:
-                    LOGGER.warning(f'Make Sure the Bot is Added to Chat ID : {chatx}')
-                except PeerIdInvalid:
-                    LOGGER.warning(f'Make Sure the Chat ID is Valid ( Multiple Chat ID are Separated by single Space ), Chat ID : {chatx}')
-                except Exception as e:
-                    LOGGER.error(e)
+    except Exception as e:
+        LOGGER.warning(e)
     if SET_BOT_COMMANDS.lower() == "true":
         for a in app:
             a.set_bot_commands(botcmds)
