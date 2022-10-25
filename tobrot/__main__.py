@@ -190,8 +190,8 @@ if __name__ == "__main__":
 
     # Bot Restart & Restart Message >>>>>>>>
     now=datetime.now(pytz.timezone(f'{TIMEZONE}'))
-    date = curr.strftime('%d %B, %Y')
-    time = curr.strftime('%I:%M:%S %p')
+    date = now.strftime('%d %B, %Y')
+    time = now.strftime('%I:%M:%S %p')
     rst_text = f'''<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !!</b>
 
 <b>📆 𝘿𝙖𝙩𝙚 :</b> <code>{date}</code> 
