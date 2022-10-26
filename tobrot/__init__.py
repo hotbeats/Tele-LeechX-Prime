@@ -179,7 +179,7 @@ LOG_COMMAND = getVar("LOG_COMMAND", "log")
 STATS_COMMAND = getVar("STATS_COMMAND", "stats")
 
 #Bot Command [Custom Bot Cmd Name]  >>>>>>>>>>>
-SET_BOT_COMMANDS = getVar("SET_BOT_COMMANDS", True)
+SET_BOT_COMMANDS = getVar("SET_BOT_COMMANDS", "true")
 UPLOAD_COMMAND = getVar("UPLOAD_COMMAND", "upload")
 RENEWME_COMMAND = getVar("RENEWME_COMMAND", "renewme")
 RENAME_COMMAND = getVar("RENAME_COMMAND", "rename")
