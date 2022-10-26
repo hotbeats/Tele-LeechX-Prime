@@ -111,7 +111,10 @@ async def start(client, message):
                 quote=True
             )
         else:
-            await message.delete()
+            await message.reply_text(
+            "**I Am Alive and Working, Send /help to Know How to Use Me !** ✨",
+            parse_mode=enums.ParseMode.MARKDOWN,
+        )
     else:
         await message.reply_text(
             "**I Am Alive and Working, Send /help to Know How to Use Me !** ✨",
