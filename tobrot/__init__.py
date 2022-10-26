@@ -23,6 +23,8 @@ from dotenv import load_dotenv
 from pyrogram import Client
 
 run(["chmod", "+x", "extract"])
+run(["wget", "-O", "/app/tobrot/aria2/dht.dat", "https://github.com/P3TERX/aria2.conf/raw/master/dht.dat"])
+run(["wget", "-O", "/app/tobrot/aria2/dht6.dat", "https://github.com/P3TERX/aria2.conf/raw/master/dht6.dat"])
 
 def getVar(var: str, val):
     return environ.get(var, val)
@@ -148,7 +150,7 @@ CUSTOM_PREFIX = getVar("CUSTOM_PREFIX", "")
 CUSTOM_SUFFIX = getVar("CUSTOM_SUFFIX", "")
 
 #Bot Command [Leech]  >>>>>>>>>>>
-LEECH_COMMAND = getVar("LEECH_COMMAND", leech)
+LEECH_COMMAND = getVar("LEECH_COMMAND", "leech")
 LEECH_UNZIP_COMMAND = getVar("LEECH_UNZIP_COMMAND", "extract")
 LEECH_ZIP_COMMAND = getVar("LEECH_ZIP_COMMAND", "archive")
 GLEECH_COMMAND = getVar("GLEECH_COMMAND", "gleech")
