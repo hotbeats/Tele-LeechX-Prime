@@ -21,6 +21,7 @@ from logging.handlers import RotatingFileHandler
 from sys import exit
 from dotenv import load_dotenv
 from pyrogram import Client
+from telegram.ext import Updater
 
 run(["chmod", "+x", "extract"])
 
