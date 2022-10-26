@@ -23,8 +23,6 @@ from dotenv import load_dotenv
 from pyrogram import Client
 
 run(["chmod", "+x", "extract"])
-run(["wget", "-O", "/app/tobrot/aria2/dht.dat", "https://github.com/P3TERX/aria2.conf/raw/master/dht.dat"])
-run(["wget", "-O", "/app/tobrot/aria2/dht6.dat", "https://github.com/P3TERX/aria2.conf/raw/master/dht6.dat"])
 
 def getVar(var: str, val):
     return environ.get(var, val)
