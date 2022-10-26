@@ -345,3 +345,6 @@ if STRING_SESSION:
             LOGGER.info("[SUCCESS] Initiated UserBot : Non-Premium Mode. Add Premium Account StringSession to Use 4GB Upload. ")
     else:
         LOGGER.warning("[FAILED] Userbot Not Started. ReCheck Your STRING_SESSION, and Other Vars")
+
+updater = Updater(token=TG_BOT_TOKEN[0])
+bot = updater.bot
