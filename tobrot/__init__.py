@@ -148,7 +148,7 @@ CUSTOM_PREFIX = getVar("CUSTOM_PREFIX", "")
 CUSTOM_SUFFIX = getVar("CUSTOM_SUFFIX", "")
 
 #Bot Command [Leech]  >>>>>>>>>>>
-LEECH_COMMAND = getVar("LEECH_COMMAND", "leech")
+LEECH_COMMAND = getVar('LEECH_COMMAND', 'leech')
 LEECH_UNZIP_COMMAND = getVar("LEECH_UNZIP_COMMAND", "extract")
 LEECH_ZIP_COMMAND = getVar("LEECH_ZIP_COMMAND", "archive")
 GLEECH_COMMAND = getVar("GLEECH_COMMAND", "gleech")
