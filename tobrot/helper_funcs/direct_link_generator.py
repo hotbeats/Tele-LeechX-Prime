@@ -383,7 +383,7 @@ def fembed(link: str) -> str:
     count = len(dl_url)
     for i in dl_url:
         lst_link.append(dl_url[i])
-    return lst_link[count-1]
+    return lst_link[count-2]
 
 
 def sbembed(link: str) -> str:
